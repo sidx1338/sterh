@@ -1,0 +1,62 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  opacity: 0.9;
+  background-color: var(--bg);
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: 1px var(--beruz) solid;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    max-width: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &__number {
+    color: var(--white);
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--beruz)
+    }
+  }
+}
+
+.menu {
+  &__nav {
+
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 60px;
+  }
+
+  &__link {
+    color: var(--white);
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--beruz)
+    }
+  }
+
+}
+
