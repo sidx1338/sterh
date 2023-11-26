@@ -6,7 +6,7 @@ import Email from "../../assets/02.svg"
 import Rekvizit from "../../assets/03.svg"
 import Footer from "../../components/Footer/Footer.jsx";
 import {Form} from "../../components/Form/Form.jsx";
-import MapComponent from "../../components/MapComponent/MapComponent.jsx";
+// import MapComponent from "../../components/MapComponent/MapComponent.jsx";
 
 
 const Contacts = () => {
@@ -42,7 +42,7 @@ const Contacts = () => {
          </div>
        </div>
              <div className="map__container">
-                <MapComponent/>
+                {/*<MapComponent/>*/}
              </div>
          <Footer/>
      </div>
