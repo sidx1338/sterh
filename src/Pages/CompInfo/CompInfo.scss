@@ -1,0 +1,43 @@
+.info__container {
+  padding-top: 180px;
+}
+
+.info__main_title {
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 130%; /* 65px */
+}
+
+.info__main_title span{
+  color: var(--beruz);
+}
+
+.info__main_title:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.info__services_title {
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 130%; /* 65px */
+}
+
+.info__services {
+  color: var(--beruz);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 130%; /* 65px */
+}
+
+.info__services_subtitle {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%; /* 65px */
+}
+
+ul {
+  list-style-type: square;
+}

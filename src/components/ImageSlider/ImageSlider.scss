@@ -1,0 +1,29 @@
+/* Стили для контейнера слайдера */
+.slider-container {
+  width: 100%; /* Ширина занимает всю доступную ширину */
+  margin: 0 auto;
+  max-width: 800px; /* Максимальная ширина контейнера слайдера */
+}
+
+/* Стили для слайдера */
+.slick-slider {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+//.slick-prev {
+//  left: 10px;
+//}
+//
+//.slick-next {
+//  right: 10px;
+//}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

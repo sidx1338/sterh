@@ -13,11 +13,36 @@
   }
 
   &__container {
+    max-width: 1400px;
     display: flex;
+    column-gap: 15px;
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
+    @media (max-width: 992px) {
+      justify-content: start;
+      column-gap: 35px;
+    }
+  }
+
+  &__logo{
+    @media (max-width: 992px) {
+      flex: 1 1 100%;
+    }
+  }
+
+
+  &__logo-link {
+
+    img {
+      min-width: 130px;
+      max-width: 100%;
+    }
+  }
+
+  &__menu {
+
   }
 
   &__actions {
@@ -32,6 +57,7 @@
   }
 
   &__number {
+    white-space: nowrap;
     color: var(--white);
     transition: color 0.3s ease;
     &:hover {
@@ -41,14 +67,60 @@
 }
 
 .menu {
-  &__nav {
 
+  &__nav {
+    @media (max-width: 992px) {
+      z-index:2;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: -100%;
+      left: 0;
+      background: #000;
+      padding: 120px 30px 30px 30px;
+      -webkit-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      overflow: auto;
+      &._active {
+        top: 0;
+      }
+
+      &::before {
+        content: "";
+        z-index: 2;
+        position: fixed;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        height: 60px;
+        background: #060e11;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+
+        &._active {
+          top: 0;
+        }
+      }
+    }
   }
 
   &__list {
-    display: flex;
-    column-gap: 60px;
+    text-align: center;
+
+    @media (min-width: 993px) {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      column-gap: 60px;
+    }
+
+    @media (max-width: 1080px) {
+      column-gap: 20px;
+    }
+
+
   }
+
 
   &__link {
     color: var(--white);
@@ -57,6 +129,58 @@
       color: var(--beruz)
     }
   }
-
 }
 
+.icon-menu {
+  @media (min-width: 993px) {
+    display: none;
+  }
+  position: relative;
+  background: transparent;
+  padding: 11px;
+  display: block;
+  width: 30px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  height: 18px;
+  z-index: 5;
+  cursor: pointer;
+  &::before {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    //transform: rotate(45deg);
+  }
+  span {
+    position: absolute;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    right: 0;
+    top: 9px;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+  }
+  &::after {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #fff;
+    //transform: rotate(-45deg);
+  }
+}

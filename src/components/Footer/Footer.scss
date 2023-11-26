@@ -1,0 +1,48 @@
+.footer {
+  background-color: #222; /* Цвет фона футера */
+  color: #fff; /* Цвет текста */
+  padding: 20px 0; /* Внутренний отступ сверху и снизу */
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* Центрирование контейнера на странице */
+}
+
+.footer__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  margin-bottom: 10px;
+}
+
+.footer__actions {
+  margin-bottom: 10px;
+}
+
+.footer__number,
+.footer__email {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.footer__links {
+
+}
+
+.footer__link {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}

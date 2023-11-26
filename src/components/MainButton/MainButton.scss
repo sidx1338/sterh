@@ -1,0 +1,15 @@
+.main-btn {
+  position: relative;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%; /* 26px */
+  padding: 26px 70px;
+  background-color: var(--beruz);
+  z-index: 10;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #0b99b2;
+  }
+}

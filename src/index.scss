@@ -85,7 +85,7 @@ table {
   --dark: #2F333C;
   --bg: #1F1F1F;
   --white: #FFFFFF;
-  --beruz: #0DBCDA;
+  --beruz: rgb(13, 188, 218);
   --gradient_grey: linear-gradient(to bottom, #5E5A5A, #BEC7D7);
   --gradient: linear-gradient(to bottom, #614AD3, #E42C64);
   --gradient_body: linear-gradient(to right bottom, #DCFFC0, #C0FFFB);
@@ -105,7 +105,3 @@ body {
   margin: 0 auto;
 }
 
-.video {
-  width: 100%;
-  height: auto;
-}
