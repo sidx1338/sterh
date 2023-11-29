@@ -20,7 +20,7 @@ const ObjectInfo = () => {
                 <div className="object_info">
                     <div className="object_info__container">
                         <h2 className="object__title">
-                            <a href="/objects">
+                            <a href="/sterh/objects">
                                 <img className="squades__icon" src={Squades}/>
                             </a>
                             {object.fullname}

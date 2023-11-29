@@ -1,67 +1,81 @@
 import React from "react";
-import './Footer.scss'
-import Logo from "../../assets/logo.svg"
+import "./Footer.scss";
+import Logo from '../../assets/logo.svg';
 
-const Footer = () => {
+function Footer() {
     return (
         <footer className="footer">
-            <nav className="footer__container">
+            <div className="footer__container">
                 <div className="footer__info">
-                <div className="footer__logo">
-                    <a href="/" className="footer__logo-link">
-                        <img src={Logo} alt="logo" width={120}/>
-                    </a>
-                </div>
-                <div className="footer__actions">
-                    <div className="footer__text">ООО СК "СТЕРХ"</div>
-                </div>
-                <div className="footer__actions">
-                    {/*<img className="header__phone" src={Phone} alt="phone"/>*/}
-                    <a href="tel:79786883771" className="footer__number">+7 978-688-37-71</a>
-                </div>
-                <div className="footer__actions">
-                    <a href="#" className="footer__email">strojart@list.ru</a>
-                </div>
-                <div className="footer__actions">
-                    <a href="#" className="footer__email">sk.sterh@mail.ru</a>
-                </div>
-                </div>
-                    <div>
-                        Строительство жилых и коммерческих зданий
-                        <ul>
-                            <li>Строительство домов и коттеджей</li>
-                            <li>Строительство многоквартирных домов</li>
-                            <li>Реконструкция и ремонт существующих зданий</li>
-                        </ul>
+                    <div className="footer__logo">
+                        <a href="/sterh" className="footer__logo-link">
+                            <img src={Logo} alt="logo" width={120}/>
+                        </a>
                     </div>
-                    <div>
-                        Отделочные работы
-                        <ul>
-                            <li>Внутренняя отделка помещений</li>
-                            <li>Наружная отделка фасадов зданий</li>
-                        </ul>
+                    <div className="footer__actions">
+                        <div className="footer__text">ООО СК "СТЕРХ"</div>
                     </div>
+                    <div className="footer__actions">
+                        {/*<img className="header__phone" src={Phone} alt="phone"/>*/}
+                        <a href="tel:79786883771" className="footer__number">+7 978-688-37-71</a>
+                    </div>
+                    <div className="footer__actions">
+                        <a href="#" className="footer__email">strojart@list.ru</a>
+                    </div>
+                    <div className="footer__actions">
+                        <a href="#" className="footer__email">sk.sterh@mail.ru</a>
+                    </div>
+                </div>
+                <div className="footer__info">
+                    <ul>
+                        <li className="footer__text">Строительство жилых и нежилых зданий</li>
+                        <li className="footer__text">Строительство домов и коттеджей</li>
+                        <li className="footer__text">Строительство многоквартирных домов</li>
+                        <li className="footer__text">Реконструкция и ремонт существующих зданий</li>
+                    </ul>
+                </div>
+                <div className="footer__info">
+                    <ul>
+                        <li className="footer__text">Отделочные работы</li>
+                        <li className="footer__text">Внутренняя отделка помещений</li>
+                        <li className="footer__text">Наружная отделка фасадов зданий</li>
+                    </ul>
+                </div>
 
-                <div className="footer__links">
-                    <a href="/info" className="footer__link">
-                        О компании
-                    </a>
-                    <a href="/advantages" className="footer__link">
-                        Преимущества
-                    </a>
-                    <a href="/objects" className="footer__link">
-                        Объекты
-                    </a>
-                    <a href="/services" className="footer__link">
-                        Услуги
-                    </a>
-                    <a href="/contacts" className="footer__link">
-                        Контакты
-                    </a>
+                <div className="footer__menu menu">
+                    <nav className="menu__nav">
+                        <ul className="menu__list">
+                            <li className="menu__item">
+                                <a href="/sterh/info" className="menu__link">
+                                    О компании
+                                </a>
+                            </li>
+                            <li className="menu__item">
+                                <a href="/sterh/advantages" className="menu__link">
+                                    Преимущества
+                                </a>
+                            </li>
+                            <li className="menu__item">
+                                <a href="/sterh/objects" className="menu__link">
+                                    Объекты
+                                </a>
+                            </li>
+                            <li className="menu__item">
+                                <a href="/sterh/services" className="menu__link">
+                                    Услуги
+                                </a>
+                            </li>
+                            <li className="menu__item">
+                                <a href="/sterh/contacts" className="menu__link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </nav>
+            </div>
         </footer>
-    )
+    );
 }
 
-export default Footer
+export default Footer;

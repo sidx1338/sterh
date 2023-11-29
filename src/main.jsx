@@ -4,7 +4,7 @@ import {
     createBrowserRouter, Route,
     RouterProvider,
 } from "react-router-dom";
-import App from './App.jsx'
+//import App from './App.jsx'
 import './fonts/icon-font/style.css'
 import './index.scss'
 
@@ -19,31 +19,31 @@ import ObjectInfo from "./components/ObjectInfo/ObjectInfo.jsx";
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App/>
-    },
-    {
-        path: "/advantages",
-        element: <Advantages/>
-    },
-    {
-        path: "/info",
-        element: <CompInfo/>
-    },
-    {
-        path: "/contacts",
+        path: "/sterh",
         element: <Contacts/>
     },
     {
-        path: "/objects",
+        path: "/sterh/advantages",
+        element: <Advantages/>
+    },
+    {
+        path: "/sterh/info",
+        element: <CompInfo/>
+    },
+    {
+        path: "/sterh/contacts",
+        element: <Contacts/>
+    },
+    {
+        path: "/sterh/objects",
         element: <Objects/>
     },
     {
-        path: "/services",
+        path: "/sterh/services",
         element: <Services/>
     },
     {
-        path: "/objects/:title",
+        path: "/sterh/objects/:title",
         element: <ObjectInfo/>
     }
 

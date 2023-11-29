@@ -2,7 +2,7 @@
   "name": "ooosterh",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sidx1338.github.io/sterh/",
+  "homepage": "https://sidx1338.github.io/sterh/#",
   "type": "module",
   "scripts": {
     "dev": "vite",

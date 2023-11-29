@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  opacity: 0.9;
+  //opacity: 0.9;
   background-color: var(--bg);
   &::after {
     content: "";
@@ -86,7 +86,7 @@
       }
 
       &::before {
-        content: "";
+        //content: "";
         z-index: 2;
         position: fixed;
         width: 100%;
@@ -159,17 +159,7 @@
     background-color: #fff;
     //transform: rotate(45deg);
   }
-  span {
-    position: absolute;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    right: 0;
-    top: 9px;
-    width: 100%;
-    height: 4px;
-    border-radius: 3px;
-    background-color: #fff;
-  }
+
   &::after {
     content: "";
     -webkit-transition: all 0.3s ease 0s;

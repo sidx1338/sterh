@@ -8,7 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 const Object = ({ object }) => {
     return (
         <div className="object__card">
-            <Link to={`/objects/${object.title}`}>
+            <Link to={`/sterh/objects/${object.title}`}>
                 <Card sx={{ maxWidth: 400 }}>
                     <CardActionArea>
                     <CardMedia
