@@ -15,12 +15,13 @@ import {Contacts} from "./Pages/Contacts/Contacts.jsx";
 import {Objects} from "./Pages/Objects/Objects.jsx";
 import {Services} from "./Pages/Services/Services.jsx";
 import ObjectInfo from "./components/ObjectInfo/ObjectInfo.jsx";
+import App from "./App.jsx";
 
 
 const router = createBrowserRouter([
     {
         path: "/sterh",
-        element: <Contacts/>
+        element: <Objects/>
     },
     {
         path: "/sterh/advantages",
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
     },
     {
         path: "/sterh/contacts",
-        element: <Contacts/>
+        element: <App/>
     },
     {
         path: "/sterh/objects",
-        element: <Objects/>
+        element: <Contacts/>
     },
     {
         path: "/sterh/services",

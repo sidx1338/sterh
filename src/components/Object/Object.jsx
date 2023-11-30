@@ -9,7 +9,7 @@ const Object = ({ object }) => {
     return (
         <div className="object__card">
             <Link to={`/sterh/objects/${object.title}`}>
-                <Card sx={{ maxWidth: 400 }}>
+                <Card>
                     <CardActionArea>
                     <CardMedia
                         component="img"

@@ -2,26 +2,16 @@
   padding-top: 180px;
 
   &__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
     margin: 0 auto;
-
+    max-width: 1200px;
+    padding: 0 15px;
   }
 }
 
-.object {
-  width: calc(33.33% - 10px); // 10px - отступы между картинками
-  margin-bottom: 20px; // Вы можете изменить величину отступа по вашему усмотрению
-  box-sizing: border-box; // Учтем отступы в расчетах
-  flex-basis: calc(33.33% - 10px);
-
-  img {
-    width: 100%; // Сделаем картинку 100% ширины контейнера
-    height: auto; // Поддерживаем пропорции
-    display: block; // Убираем внешние отступы
-  }
-}
 
 .objects:not(:last-child) {
   margin-bottom: 60px;

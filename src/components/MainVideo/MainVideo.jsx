@@ -21,8 +21,8 @@ const MainVideo = () => {
     return (
         <React.Fragment>
         <div className="intro">
-            <div className="video">
-                <video className="video__media" src={test} autoPlay loop muted/>
+            {/*<div className="video">*/}
+            {/*    <video className="video__media" src={test} autoPlay loop muted/>*/}
                      <div className="intro__container">
                          <div className="content">
                              <h1 className="content__title">Строительство жилых и не жилых зданий <br/> в <span>Республике Крым</span></h1>
@@ -30,14 +30,14 @@ const MainVideo = () => {
                              <Button className="main_btn" variant="outlined" onClick={handleClickOpen}>
                                  <div className="btn_text">Оставить заявку</div>
                              </Button>
-                             <Dialog open={open} onClose={handleClose}>
+                             <Dialog className="dialog" open={open} onClose={handleClose}>
                                  <DialogContent>
                                      <Form/>
                                  </DialogContent>
                              </Dialog>
                          </div>
                      </div>
-            </div>
+            {/*</div>*/}
         </div>
         </React.Fragment>
     )

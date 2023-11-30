@@ -30,7 +30,7 @@ const Contacts = () => {
                  </div>
                  <div className="contacts__actions">
                      <img className="contacts__icon" src={Rekvizit} alt="rekvizit"/>
-                     <a href="carta_partnera.pdf" className="contacts__rekvizit">Реквизиты</a>
+                     <a href="../../assets/carta_partnera.pdf" className="contacts__rekvizit">Реквизиты</a>
                  </div>
                  </div>
              </div>
