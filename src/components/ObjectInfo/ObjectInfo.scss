@@ -1,5 +1,8 @@
 .object_info {
   padding-top: 180px;
+  @media (max-width: 702px) {
+    padding-top: 120px;
+  }
 }
 
 .object_info__container {
@@ -16,13 +19,28 @@
   @media (max-width: 560px) {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+  @media (max-width: 360px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .object__title {
   color: var(--white);
-  font-size: 50px;
+  font-size: 47px;
   font-weight: 700;
   line-height: 130%; /* 65px */
+  @media (max-width: 1060px) {
+    font-size: 42px;
+  }
+  @media (max-width: 833px) {
+    font-size: 35px;
+  }
+  @media (max-width: 702px) {
+    font-size: 27px;
+  }
+  @media (max-width: 534px) {
+    font-size: 24px;
+  }
 }
 
 .object__title:not(:last-child) {
@@ -37,6 +55,10 @@
   line-height: 180%; /* 26px */
   @media (max-width: 1060px) {
     margin: auto;
+    font-size: 17px;
+  }
+  @media (max-width: 536px) {
+    font-size: 14px;
   }
 }
 
@@ -48,6 +70,23 @@
   color: var(--white);
   font-size: 18px;
   font-weight: 200;
+  @media (max-width: 1060px) {
+    margin: auto;
+    font-size: 17px;
+  }
+  @media (max-width: 536px) {
+    font-size: 14px;
+  }
+}
+
+.object__card {
+  @media (max-width: 570px) {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
 }
 
 .object__image {
@@ -59,5 +98,31 @@
     margin: auto;
     margin-bottom: 30px;
   }
+  @media (max-width: 570px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0;
+  }
+}
 
+.contacts__video {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.contacts__video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
 }

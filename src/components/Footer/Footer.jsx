@@ -14,7 +14,7 @@ function Footer() {
                         </a>
                     </div>
                     <div className="footer__actions">
-                        <div className="footer__text">ООО СК "СТЕРХ"</div>
+                        <div className="">ООО СК "СТЕРХ"</div>
                     </div>
                     <div className="footer__actions">
                         {/*<img className="header__phone" src={Phone} alt="phone"/>*/}
@@ -38,17 +38,17 @@ function Footer() {
                 <div className="footer__menu-links">
                         <ul className="footer__menu-list">
                             <li className="footer__menu-item">
-                                <a href="/sterh/info" className="menu__link">
+                                <a href="/sterh/info" className="footer__nav-link">
                                     О компании
                                 </a>
                             </li>
                             <li className="footer__menu-item">
-                                <a href="/sterh/objects" className="menu__link">
+                                <a href="/sterh/objects" className="footer__nav-link">
                                     Объекты
                                 </a>
                             </li>
                             <li className="footer__menu-item">
-                                <a href="/sterh/contacts" className="menu__link">
+                                <a href="/sterh/contacts" className="footer__nav-link">
                                     Контакты
                                 </a>
                             </li>

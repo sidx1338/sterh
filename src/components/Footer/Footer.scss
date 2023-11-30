@@ -20,6 +20,10 @@
   @media (max-width: 734px) {
     gap: 30px;
   }
+  @media (max-width: 639px) {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
   @media (max-width: 459px) {
     gap: 20px;
   }
@@ -64,6 +68,14 @@
   font-size: 14px;
 }
 
+.footer__nav-link {
+  color: var(--white);
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--beruz)
+  }
+}
+
 .footer__low {
   color: #b6b5b5;
   position: absolute;
@@ -74,9 +86,7 @@
   }
 }
 
-.footer__links {
 
-}
 
 //.footer__link {
 //  color: #fff;

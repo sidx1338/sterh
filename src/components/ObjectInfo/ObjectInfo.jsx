@@ -20,9 +20,9 @@ const ObjectInfo = () => {
                 <div className="object_info">
                     <div className="object_info__container">
                         <h2 className="object__title">
-                            <a href="/sterh/objects">
-                                <img className="squades__icon" src={Squades}/>
-                            </a>
+                            {/*<a href="/sterh/objects">*/}
+                            {/*    <img className="squades__icon" src={Squades}/>*/}
+                            {/*</a>*/}
                             {object.fullname}
                         </h2>
                       <div className="object__obertka">
@@ -32,8 +32,8 @@ const ObjectInfo = () => {
                                 <p className="object__tab">Тип контракта: <br/><span>{object.contract}</span></p>
                                 <p className="object__tab">Сроки: <br/><span>{object.time}</span></p>
                             </div>
-                            <div className="object__image">
-                                <Card>
+                            <div className="object__card">
+                                <Card className="object__image">
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"

@@ -21,7 +21,7 @@ import App from "./App.jsx";
 const router = createBrowserRouter([
     {
         path: "/sterh",
-        element: <Objects/>
+        element: <Contacts/>
     },
     {
         path: "/sterh/advantages",
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/sterh/objects",
-        element: <Contacts/>
+        element: <Objects/>
     },
     {
         path: "/sterh/services",
