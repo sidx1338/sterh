@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useParams} from "react-router-dom";
 import './ObjectInfo.scss'
-import Squades from "../../../assets/squades.svg";
+import Squades from "../../assets/squades.svg";
 import {objects} from "../../objects.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
