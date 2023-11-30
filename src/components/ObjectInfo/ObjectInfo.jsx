@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useParams} from "react-router-dom";
 import './ObjectInfo.scss'
-import Squades from "../../assets/squades.svg";
+import Squades from "../../../assets/squades.svg";
 import {objects} from "../../objects.jsx";
 import Header from "../Header/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
@@ -33,7 +33,7 @@ const ObjectInfo = () => {
                                 <p className="object__tab">Сроки: <br/><span>{object.time}</span></p>
                             </div>
                             <div className="object__image">
-                                <Card sx={{ maxWidth: 500 }}>
+                                <Card>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -44,14 +44,16 @@ const ObjectInfo = () => {
                                 </Card>
                             </div>
                       </div>
-                        <iframe
-                            width="100%" height="600"
-                            src={`https://www.youtube.com/embed/${object.videocode}`}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowFullScreen
-                        ></iframe>
+                        <div className="contacts__video">
+                            <iframe
+                                width="100%" height="600"
+                                src={`https://www.youtube.com/embed/${object.videocode}`}
+                                title="YouTube video player"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
             <Footer/>

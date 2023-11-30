@@ -1,6 +1,6 @@
 import React from "react";
 import  "./MainVideo.scss"
-import test from "../../assets/test.mp4"
+//import test from "../../../assets/test.mp4"
 import {Form} from "../Form/Form.jsx";
 import {Dialog} from "@mui/material";
 import Button from "@mui/material/Button";

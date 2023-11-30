@@ -6,9 +6,16 @@
 }
 
 .object__obertka {
-  display: flex;
-  width: 100%;
-  margin-bottom: 90px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  //gap: 50px;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+  @media (max-width: 560px) {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
 
 .object__title {
@@ -28,10 +35,13 @@
   font-style: initial;
   font-weight: 500;
   line-height: 180%; /* 26px */
+  @media (max-width: 1060px) {
+    margin: auto;
+  }
 }
 
 .object__tab {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .object__tab span{
@@ -41,7 +51,13 @@
 }
 
 .object__image {
-  margin-left: 120px;
-  max-width: 580px !important;
+  max-width: 580px;
+  height: auto;
   width: 100%;
+  margin-bottom: 30px;
+  @media (max-width: 1060px) {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
 }

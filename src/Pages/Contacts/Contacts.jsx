@@ -1,9 +1,9 @@
 import React from "react";
 import './Contacts.scss'
 import Header from "../../components/Header/Header.jsx";
-import Phone from "../../assets/01.svg";
-import Email from "../../assets/02.svg"
-import Rekvizit from "../../assets/03.svg"
+import Phone from "../../../assets/01.svg";
+import Email from "../../../assets/02.svg"
+import Rekvizit from "../../../assets/03.svg"
 import Footer from "../../components/Footer/Footer.jsx";
 import {Form} from "../../components/Form/Form.jsx";
 // import MapComponent from "../../components/MapComponent/MapComponent.jsx";
@@ -30,7 +30,7 @@ const Contacts = () => {
                  </div>
                  <div className="contacts__actions">
                      <img className="contacts__icon" src={Rekvizit} alt="rekvizit"/>
-                     <a href="../../assets/carta_partnera.pdf" className="contacts__rekvizit">Реквизиты</a>
+                     <a href="../../../assets/carta_partnera.pdf" className="contacts__rekvizit">Реквизиты</a>
                  </div>
                  </div>
              </div>
