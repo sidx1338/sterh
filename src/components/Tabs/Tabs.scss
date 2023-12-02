@@ -1,35 +1,87 @@
-.Box {
+.tabs__container {
+
+}
+
+
+.box {
   border-color: var(--beruz) !important;
+  @media (max-width: 457px) {
+    max-width: 400px !important;
+    width: 100% !important;
+  }
 }
 
 .tabs__description {
 
 }
 
+
+
 .tabs__tab {
   color: #FFF !important;
   font-size: 18px !important;
   font-style: normal !important;
   font-weight: 400 !important;
-  line-height: 130% !important; /* 26px */
+  //line-height: 130% !important; /* 26px */
   font-family: 'Montserrat', sans-serif !important;
+  @media (max-width: 799px) {
+    font-size: 14px !important;
+  }
+  //@media (max-width: 569px) {
+  //  font-size: 12px !important;
+  //}
+  //@media (max-width: 457px) {
+  //  font-size: 10px !important;
+  //}
 }
 
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+//.Tab.indicator.selected {
+//  background-color: var(--beruz);
+//}
+
+//.tabs__indicator {
+//  background-color: var(--beruz) !important;
+//}
+
+//.Tab {
+//  color: #FFFFFF;
+//}
+
+.Tab.selected {
   color: var(--beruz) !important;
   font-weight: 500 !important;
 }
 
-.css-1aquho2-MuiTabs-indicator {
-  background-color: var(--beruz) !important;
-}
+//.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+//  color: var(--beruz) !important;
+//  font-weight: 500 !important;
+//}
+
+//.css-1aquho2-MuiTabs-indicator {
+//  background-color: var(--beruz) !important;
+//}
 
 .tabs__content {
   color: #FFF;
-  font-size: 20px;
-  font-style: initial;
-  font-weight: 200;
-  line-height: 180%; /* 26px */
+  font-size: 18px;
+  //font-style: initial;
+  //font-weight: 200;
+  line-height: 160%; /* 26px */
   font-family: 'Montserrat', sans-serif !important;
+  @media (max-width: 1028px) {
+    font-size: 16px;
+  }
+  @media (max-width: 926px) {
+    font-size: 14px;
+  }
+  @media (max-width: 799px) {
+    font-size: 12px;
+  }
+  //@media (max-width: 724px) {
+  //  font-size: 11px;
+  //}
+  //@media (max-width: 569px) {
+  //  font-size: 10px;
+  //}
 }
 

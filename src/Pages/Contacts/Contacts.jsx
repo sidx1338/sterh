@@ -6,13 +6,13 @@ import Email from "../../assets/02.svg"
 import Rekvizit from "../../assets/03.svg"
 import Footer from "../../components/Footer/Footer.jsx";
 import {Form} from "../../components/Form/Form.jsx";
-// import MapComponent from "../../components/MapComponent/MapComponent.jsx";
-
+import MapComponent from "../../components/MapComponent/MapComponent.jsx";
 
 const Contacts = () => {
      return (
      <div>
        <Header/>
+         <div className="background">
          <div className="contacts">
          <div className="contacts__container">
              <div className="contacts__body">
@@ -21,15 +21,15 @@ const Contacts = () => {
                  <p className="contacts__grafik">График работы: <br/>понедельник - суббота <br/>с <span>9:00</span> до <span>18:00</span></p>
                  <div className="contacts__obertka">
                  <div className="contacts__actions">
-                     <img className="contacts__icon" src={Phone} alt="phone"/>
+                     <a href="tel:79786883771"><img className="contacts__icon" src={Phone} alt="phone"/></a>
                      <a href="tel:79786883771" className="contacts__number">+7 978-688-37-71</a>
                  </div>
                  <div className="contacts__actions">
-                     <img className="contacts__icon" src={Email} alt="email"/>
-                     <a href="email-addresses" className="contacts__email">strojart@list.ru</a>
+                     <a href="mailto:strojart@list.ru"><img className="contacts__icon" src={Email} alt="email"/></a>
+                     <a href="mailto:strojart@list.ru" className="contacts__email">strojart@list.ru</a>
                  </div>
                  <div className="contacts__actions">
-                     <img className="contacts__icon" src={Rekvizit} alt="rekvizit"/>
+                     <a href="../../assets/carta_partnera.pdf"><img className="contacts__icon" src={Rekvizit} alt="rekvizit"/></a>
                      <a href="../../assets/carta_partnera.pdf" className="contacts__rekvizit">Реквизиты</a>
                  </div>
                  </div>
@@ -42,8 +42,9 @@ const Contacts = () => {
          </div>
        </div>
              <div className="map__container">
-                {/*<MapComponent/>*/}
+                <MapComponent/>
              </div>
+         </div>
          <Footer/>
      </div>
      )

@@ -1,7 +1,7 @@
 {
   "name": "ooosterh",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://sidx1338.github.io/sterh/#",
   "type": "module",
   "scripts": {
@@ -17,10 +17,10 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.16",
     "@mui/material": "^5.14.16",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "@react-email/render": "^0.0.9",
     "aos": "^2.3.4",
     "gh-pages": "^6.1.0",
-    "nodemailer": "^6.9.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,11 +36,12 @@
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
+    "vite": "^5.0.4",
+    "vite-plugin-static-copy": "^1.0.0"
   }
 }

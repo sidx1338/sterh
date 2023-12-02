@@ -1,7 +1,9 @@
 .footer {
-  background-color: #222; /* Цвет фона футера */
+  //background-color: #222; /* Цвет фона футера */
   color: #fff; /* Цвет текста */
-  padding: 20px 0; /* Внутренний отступ сверху и снизу */
+  padding: 50px 0; /* Внутренний отступ сверху и снизу */
+  background: rgb(34, 34, 34, 0.8);
+ // margin-top: 30px
 }
 
 .footer__container {
@@ -51,6 +53,7 @@
 
 .footer__menu-item {
   margin-bottom: 20px;
+  list-style-type: none;
 }
 
 .footer__logo {

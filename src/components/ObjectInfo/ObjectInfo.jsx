@@ -38,7 +38,7 @@ const ObjectInfo = () => {
                                         <CardMedia
                                             component="img"
                                             height="310"
-                                            image={object.image}
+                                            image={`${object.image}`}
                                         />
                                         </CardActionArea>
                                 </Card>

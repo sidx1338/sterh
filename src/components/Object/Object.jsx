@@ -9,17 +9,17 @@ const Object = ({ object }) => {
     return (
         <div className="object__card">
             <Link to={`/sterh/objects/${object.title}`}>
-                <Card>
-                    <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        height="200"
-                        image={object.image}
-                    />
-                        <h2>{object.name}</h2>
-                        <p>{object.customer}</p>
-                    </CardActionArea>
-                </Card>
+                        <Card>
+                            <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="200"
+                                        image={object.image}
+                                    />
+                                        {/*<h3>{object.title}</h3>*/}
+                                        {/*<p>Текст</p>*/}
+                            </CardActionArea>
+                        </Card>
             </Link>
         </div>
     );

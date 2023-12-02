@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-    createBrowserRouter, Route,
+    createBrowserRouter, createHashRouter, HashRouter, Route,
     RouterProvider,
 } from "react-router-dom";
-//import App from './App.jsx'
 import './fonts/icon-font/style.css'
 import './index.scss'
 
@@ -18,10 +17,14 @@ import ObjectInfo from "./components/ObjectInfo/ObjectInfo.jsx";
 import App from "./App.jsx";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
+    {
+        path: "/",
+        element: <App/>
+    },
     {
         path: "/sterh",
-        element: <Contacts/>
+        element: <App/>
     },
     {
         path: "/sterh/advantages",
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/sterh/contacts",
-        element: <App/>
+        element: <Contacts/>
     },
     {
         path: "/sterh/objects",
@@ -47,7 +50,6 @@ const router = createBrowserRouter([
         path: "/sterh/objects/:title",
         element: <ObjectInfo/>
     }
-
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

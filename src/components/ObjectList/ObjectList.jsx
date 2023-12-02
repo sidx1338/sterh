@@ -8,7 +8,9 @@ export default function ObjectList() {
 
     return (
        <div className="objects">
+           <div className="objects__container-title">Наши работы</div>
         <div className="objects__container">
+
             {objects.map((object) => (
                 <Object className="object" key={object.id} object={object} />
             ))}

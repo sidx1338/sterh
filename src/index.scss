@@ -61,7 +61,7 @@ a:hover {
   text-decoration: none;
 }
 ul li {
-  list-style: none;
+  //list-style: none;
 }
 img {
   vertical-align: top;
@@ -84,6 +84,7 @@ table {
   --active: #DCD4FF;
   --dark: #2F333C;
   --bg: #1F1F1F;
+  --bgcolor: rgb(231, 0, 0);
   --white: #FFFFFF;
   --beruz: rgb(13, 188, 218);
   --gradient_grey: linear-gradient(to bottom, #5E5A5A, #BEC7D7);
@@ -95,6 +96,9 @@ table {
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--bg);
+  background-image: url('assets/Hexagon5.0.svg');
+  background-repeat: no-repeat;
+  //background-size: cover;
   overflow-x: hidden;
 }
 

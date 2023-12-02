@@ -1,13 +1,23 @@
+.background {
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 var(--beruz);
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  //border-radius: 10px;
+}
+
 .contacts {
   padding-top: 180px;
   @media (max-width: 960px) {
     padding-top: 120px;
   }
+
   &__container {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: space-between;
+
   }
 }
 
@@ -61,6 +71,7 @@
 
 .contacts__backconnection {
   max-width: 500px;
+
   @media (max-width: 1060px) {
     margin: auto;
   }
@@ -184,6 +195,11 @@
   @media (max-width: 346px) {
     font-size: 10px;
   }
+}
+
+.map__container {
+  //margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 

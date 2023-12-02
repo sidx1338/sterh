@@ -1,12 +1,43 @@
 .info__container {
   padding-top: 180px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 var(--beruz);
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  padding-bottom: 30px;
+  @media (max-width: 461px) {
+    padding-top: 140px;
+  }
+}
+
+.info__top {
+}
+
+.services__container {
+  margin-bottom: 30px;
+}
+
+.info__top:not(:last-child) {
+  margin-bottom: 60px;
 }
 
 .info__main_title {
   color: #FFFFFF;
-  font-size: 50px;
+  font-size: 47px;
   font-weight: 700;
   line-height: 130%; /* 65px */
+  @media (max-width: 1080px) {
+    font-size: 44px;
+  }
+  @media (max-width: 926px) {
+    font-size: 36px;
+  }
+  @media (max-width: 799px) {
+    font-size: 33px;
+  }
+  @media (max-width: 569px) {
+    font-size: 28px;
+  }
 }
 
 .info__main_title span{
@@ -19,25 +50,84 @@
 
 .info__services_title {
   color: #FFFFFF;
-  font-size: 40px;
+  font-size: 33px;
   font-weight: 700;
   line-height: 130%; /* 65px */
+  margin-bottom: 60px;
+  @media (max-width: 1080px) {
+    font-size: 29px;
+  }
+  @media (max-width: 926px) {
+    font-size: 27px;
+  }
+  @media (max-width: 799px) {
+    font-size: 25px;
+  }
+  @media (max-width: 569px) {
+    font-size: 23px;
+  }
 }
 
 .info__services {
-  color: var(--beruz);
-  font-size: 30px;
+  color: var(--white);
+  font-size: 24px;
   font-weight: 500;
   line-height: 130%; /* 65px */
+  margin-bottom: 10px;
+  @media (max-width: 1080px) {
+    font-size: 22px;
+  }
+  @media (max-width: 926px) {
+    font-size: 20px;
+  }
+  @media (max-width: 799px) {
+    font-size: 18px;
+  }
+  @media (max-width: 569px) {
+    font-size: 16px;
+  }
 }
 
 .info__services_subtitle {
-  color: var(--white);
-  font-size: 20px;
-  font-weight: 400;
+  color: var(--beruz);
+  font-size: 16px;
+  font-weight: 100;
   line-height: 130%; /* 65px */
+  margin-left: 30px;
+  margin-bottom: 30px;
+  @media (max-width: 1080px) {
+    font-size: 15px;
+  }
+  @media (max-width: 926px) {
+    font-size: 14px;
+  }
+  @media (max-width: 799px) {
+    font-size: 13px;
+  }
+  //@media (max-width: 569px) {
+  //  font-size: 11px;
+  //}
 }
 
-ul {
-  list-style-type: square;
+.info__advantages {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 130%; /* 65px */
+  margin-left: 30px;
+  margin-bottom: 30px;
+  @media (max-width: 1080px) {
+    font-size: 15px;
+  }
+  @media (max-width: 926px) {
+    font-size: 14px;
+  }
+  @media (max-width: 799px) {
+    font-size: 13px;
+  }
 }
+
+.info__advantages-li {
+  margin-bottom: 10px;
+}
+

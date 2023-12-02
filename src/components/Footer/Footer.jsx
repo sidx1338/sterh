@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import Logo from '../../assets/logo.svg';
+import {Link} from "react-router-dom";
 
 function Footer() {
     let currentYear = new Date().getFullYear();
@@ -38,19 +39,19 @@ function Footer() {
                 <div className="footer__menu-links">
                         <ul className="footer__menu-list">
                             <li className="footer__menu-item">
-                                <a href="/sterh/info" className="footer__nav-link">
+                                <Link to={`/sterh/info`} className="footer__nav-link">
                                     О компании
-                                </a>
+                                </Link>
                             </li>
                             <li className="footer__menu-item">
-                                <a href="/sterh/objects" className="footer__nav-link">
+                                <Link to={`/sterh/objects`} className="footer__nav-link">
                                     Объекты
-                                </a>
+                                </Link>
                             </li>
                             <li className="footer__menu-item">
-                                <a href="/sterh/contacts" className="footer__nav-link">
+                                <Link to={`/sterh/contacts`} className="footer__nav-link">
                                     Контакты
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                 </div>

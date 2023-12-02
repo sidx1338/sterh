@@ -4,6 +4,7 @@ import Logo from "../../assets/logo.svg";
 import Phone from "../../assets/telephone.svg";
 import {useClickOutside} from "../../hooks/useClickOutside.js";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     const [isOpen, setOpen] = useState();
@@ -52,19 +53,19 @@ const Header = () => {
                         <nav className={`header__nav ${isOpen ? "active" : ""}`} ref={menuRef}>
                             <ul className="header__nav-list">
                                 <li className="header__nav-item">
-                                    <a href="/sterh/info" className="header__nav-link">
+                                    <Link to={`/sterh/info`} className="header__nav-link">
                                         О компании
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="header__nav-item">
-                                    <a href="/sterh/objects" className="header__nav-link">
+                                    <Link to={`/sterh/objects`} className="header__nav-link">
                                         Объекты
-                                    </a>
+                                    </Link>
                                 </li>
                                 <li className="header__nav-item">
-                                    <a href="/sterh/contacts" className="header__nav-link">
+                                    <Link to={`/sterh/contacts`} className="header__nav-link">
                                         Контакты
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>

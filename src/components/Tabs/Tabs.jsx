@@ -44,12 +44,14 @@ export default function BasicTabs() {
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
-    };
-
+    }
     return (
         <Box sx={{ width: '100%' }} className="tabs__container">
-            <Box sx={{ borderBottom: 1}} className="Box">
-                <Tabs value={value}
+            <Box sx={{ borderBottom: 1}} className="box">
+                <Tabs
+                      className="tabs"
+                      classes={{ indicator: 'tabs__indicator' }}
+                      value={value}
                       onChange={handleChange}
                       aria-label="basic tabs example"
                       >
@@ -60,27 +62,31 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <CustomTabPanel  value={value} index={0}>
-                <div className="tabs__content"> Миссия нашей строительной компании заключается в создании качественных, инновационных и устойчивых строительных решений, которые удовлетворяют потребности наших клиентов, способствуют развитию сообщества и уважают окружающую среду</div>
+                <div className="tabs__content"> Миссия нашей строительной компании заключается в создании качественных, инновационных и устойчивых строительных решений, которые удовлетворяют потребности наших клиентов, способствуют развитию сообщества и уважают окружающую среду.</div>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 <div className="tabs__content"> Наша цель - быть ведущей компанией, предоставляющей высококачественные строительные услуги, основанные на индивидуальном подходе к каждому проекту и стремлении к постоянному совершенствованию.</div>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={2}>
                 <div className="tabs__content">
-                    <p>Качество и безопасность</p>
-                    <p>Устойчивость и экологичность</p>
-                    <p>Удовлетворение клиентов</p>
-                    <p>Инновации и развитие</p>
-                    <p>Профессионализм и обучение</p>
-                    <p>Финансовая устойчивость</p>
+                    <ul>
+                        <li>Качество и безопасность</li>
+                        <li>Устойчивость и экологичность</li>
+                        <li>Удовлетворение клиентов</li>
+                        <li>Инновации и развитие</li>
+                        <li>Профессионализм и обучение</li>
+                        <li>Финансовая устойчивость</li>
+                    </ul>
                 </div>
             </CustomTabPanel>
             <CustomTabPanel value={value} index={3}>
                 <div className="tabs__content">
-                    <p>Завершение проектов в срок и в бюджете</p>
-                    <p>Обеспечение безопасности</p>
-                    <p>Контроль качества</p>
-                    <p>Управление ресурсами</p>
+                    <ul>
+                        <li>Завершение проектов в срок и в бюджете</li>
+                        <li>Обеспечение безопасности</li>
+                        <li>Контроль качества</li>
+                        <li>Управление ресурсами</li>
+                    </ul>
                 </div>
             </CustomTabPanel>
         </Box>
