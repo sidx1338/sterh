@@ -4,18 +4,11 @@ import  "./MainVideo.scss"
 import {Form} from "../Form/Form.jsx";
 import ModalWindow from "../ModalWindow/ModalWindow.jsx";
 import {Link} from "react-router-dom";
-//import ImageSlider from "../ImageSlider/ImageSlider.jsx";
 
 const MainVideo = () => {
 
     const [modalActive, setModalActive] = React.useState(false);
 
-    const images = [
-        'assets/genesis.ppg',
-        'assets/genesis.ppg',
-        'assets/genesis.ppg',
-        // Добавьте больше изображений, по мере необходимости
-    ];
     return (
         <div className="intro">
             {/*<div className="video">*/}
@@ -33,19 +26,16 @@ const MainVideo = () => {
 
                              <h2 className="project__title">Наши проекты</h2>
                              <p className="project__subtitle">Мы нацелены на достижение результата, который приносит удовлетворение нашим клиентам. Доверие заказчиков и высокая репутация вдохновляют нас реализовывать проекты с выдающимся качеством. Мы постоянно ищем новые, максимально эффективные подходы в области строительства.</p>
-
                              {/*<ImageSlider images={images} />*/}
                                  <Link to={`/sterh/objects`}>
                                      <button className="obj_btn">Смотреть все объекты</button>
                                  </Link>
-
                                  <h2 className="project__title">Строительная компания <span>"Стерх"</span></h2>
                                  <p className="project__subtitle">Мы стремимся к достижению результатов, которые принесут удовлетворение нашим клиентам. Поддержание доверия клиентов и превосходная репутация являются нашими мотиваторами для реализации проектов на самом высоком уровне.</p>
                              <Link to={`/sterh/info`}>
                                      <button className="ocomp_btn">Подробнее о компании</button>
                              </Link>
                          </div>
-
                      </div>
 
             {/*</div>*/}

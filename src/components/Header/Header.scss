@@ -4,9 +4,10 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  //opacity: 0.9;
-  //background: rgba(0, 0, 0, 0.6);
-  background-color: var(--bg);
+  background: rgba(0, 0, 0, 0.3);
+  // box-shadow: 0 1px 10px 0 var(--white);
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
   &::after {
     content: "";
     display: block;
@@ -79,6 +80,7 @@
 }
 
 .header__nav-list {
+  list-style: none;
   display: flex;
   text-align: center;
 
