@@ -1,27 +1,42 @@
-.intro {
- // max-height: 100vh;
-  overflow: hidden;
- // padding-bottom: 50px;
-  margin-bottom: 50px;
+* {
+  box-sizing: border-box;
 }
 
-.video {
+.first {
+  max-height: 100vh;
   position: relative;
-  padding-bottom: 56.25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ // background-color: rgba(0,0,0,0.5);
+  overflow: hidden
+}
 
+.main__video {
+  margin-bottom: 120px;
 }
 
 .video__media {
-  width: 100%;
-  height: auto;
   position: absolute;
-  top: 0;
   left: 0;
-  opacity: 0.43;
+  top: 0;
+  max-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.intro {
+ // max-height: 100vh;
+  //overflow: hidden;
+ // padding-bottom: 50px;
+ // margin-bottom: 50px;
 }
 
 .content {
-  padding-top: 250px;
+  padding-top: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,11 +45,17 @@
 }
 
 .content__title {
+  padding-top: 250px;
+  z-index: 10;
+  margin: 0;
   color: #FFF;
   text-align: center;
   font-size: 50px;
   font-weight: 700;
   line-height: 130%; /* 65px */
+  @media (max-width: 1496px) {
+    padding-top: 180px;
+  }
   @media (max-width: 1183px) {
     font-size: 45px;
   }
@@ -54,6 +75,9 @@
 
 .content__title:not(:last-child) {
   margin-bottom: 40px;
+  @media (max-height: 500px) {
+    margin-bottom: 20px
+  }
 }
 
 .content__title span {
@@ -61,6 +85,7 @@
 }
 
 .content__description {
+  z-index: 10;
   text-align: center;
   color: #FFF;
   font-size: 20px;
@@ -83,7 +108,10 @@
 }
 
 .content__description:not(:last-child) {
-  margin-bottom: 70px
+  margin-bottom: 70px;
+  @media (max-height: 500px) {
+    margin-bottom: 20px
+  }
 }
 
 .content__description span {
@@ -92,19 +120,20 @@
 
 .main_btn {
   color: var(--white);
-  //opacity: 0.9;
+  justify-content: center;
+  z-index: 10;
   width: 250px;
   height: 70px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(13, 188, 218, 0.85);
   box-shadow: 0 1px 10px 0 var(--white);
-  //backdrop-filter: blur( 20px );
-  //-webkit-backdrop-filter: blur( 20px );
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   border: 1px solid var(--white);
   padding: 15px;
-  margin-bottom: 180px;
+  //margin-bottom: 180px;
   border-radius: 8px;
   transition:
           background-color 0.3s ease 0s,
@@ -113,7 +142,7 @@
     &:hover {
       //background-color: var(--beruz);
       box-shadow: 0 1px 10px 0 var(--beruz);
-      color: var(--beruz);
+      //color: var(--beruz);
       border: 1px solid var(--beruz)
     }
   }
@@ -169,6 +198,7 @@
 }
 
 .project__subtitle {
+  text-indent: 50px;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
@@ -182,24 +212,22 @@
   }
   @media (max-width: 906px) {
     font-size: 14px;
+    text-indent: 25px;
   }
   @media (max-width: 503px) {
     font-size: 13px;
+    text-indent: 10px;
   }
 }
 
 .obj_btn {
   color: var(--white);
-  opacity: 0.9;
   width: 250px;
   height: 70px;
-  //background-color: var(--beruz);
-  background: rgb(13, 188, 218);
-  //box-shadow: 0 8px 32px 0 var(--beruz);
-  backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
   font-size: 14px;
-  //font-weight: 600;
   text-transform: uppercase;
   border: 1px solid var(--white);
   padding: 15px;
@@ -210,9 +238,7 @@
           color 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
-      //background-color: var(--beruz);
-      color: var(--bg);
-      border: 1px solid var(--bg)
+      border: 1px solid var(--beruz)
     }
   }
   @media (max-width: 1183px) {
@@ -242,12 +268,9 @@
   opacity: 0.9;
   width: 250px;
   height: 70px;
-  //background-color: var(--beruz);
-  background:var(--beruz);
-  //box-shadow: 0 8px 32px 0 var(--beruz);
-  backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
-  //font-weight: 600;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
   font-size: 14px;
   text-transform: uppercase;
   border: 1px solid var(--white);
@@ -259,9 +282,7 @@
           color 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
-      //background-color: var(--beruz);
-      color: var(--bg);
-      border: 1px solid var(--bg)
+      border: 1px solid var(--beruz)
     }
   }
   @media (max-width: 1183px) {

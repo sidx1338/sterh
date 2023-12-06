@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
   // box-shadow: 0 1px 10px 0 var(--white);
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
@@ -41,7 +41,7 @@
   &__logo-link {
 
     img {
-      min-width: 100px;
+     // min-width: 50px;
       max-width: 100%;
     }
   }
@@ -109,26 +109,24 @@
   }
 }
 
-.header__nav-item:nth-child(n + 2) {
-  margin-left: 20px;
-}
-
   @media (max-width: 993px) {
     .header__nav {
+      z-index: 100;
       position: fixed;
       top: 0;
-      left: -225px;
+      left: 0;
       display: flex;
       flex-direction: column;
-      width: 220px;
-      height: 100%;
-      background-color: var(--bg);
-      background-image: url("../../assets/Hexagon5.0.svg");
+      height: 100vh;
+      width: 100vw;
+      background: rgb(31, 31, 31, 0.9);
+      //background-color: var(--bg);
+      //background-image: url("../../assets/Hexagon5.0.svg");
       border: 1px solid var(--beruz);
      // border-top-right-radius: 16px;
       //border-bottom-right-radius: 16px;
-      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
-      transition: transform 0.3s linear;
+      //box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+      //transition: 0.5s;
     }
 
     .header__nav.active {
@@ -139,28 +137,17 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      padding-top: 80px;
+      align-items: center;
+      justify-content: center;
+
     }
 
-    //li {
-    //  list-style-type: none;
-    //}
     .header__nav-item {
       margin: 10px 0;
       font-weight: 500;
-      //list-style-type: none;
-      //color: #e76712;
-    }
-
-    .header__nav-item:nth-child(n + 2) {
-      margin-left: 0;
+      font-size: 30px;
     }
   }
-
-
-//.menu {
-
-
 
 //.icon-menu {
 //  @media (min-width: 993px) {

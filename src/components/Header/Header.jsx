@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import './Header.scss';
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logong.svg";
 import Phone from "../../assets/telephone.svg";
 import {useClickOutside} from "../../hooks/useClickOutside.js";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
@@ -9,38 +9,39 @@ import {Link} from "react-router-dom";
 const Header = () => {
     const [isOpen, setOpen] = useState();
     const menuRef = useRef(null);
-    useClickOutside(menuRef, () => {
-        if (isOpen) setTimeout(() => setOpen(false), 50);
-    });
+    // useClickOutside(menuRef, () => {
+    //     if (isOpen) setTimeout(() => setOpen(false), 50);
+    // });
 
-    useEffect(() => {
-        let startTouchX = 0;
-        let endTouchX = 0;
-        let startTouchY = 0;
-        let endTouchY = 0;
+    // useEffect(() => {
+    //     let startTouchX = 0;
+    //     let endTouchX = 0;
+    //     let startTouchY = 0;
+    //     let endTouchY = 0;
+    //
+    //     document.addEventListener("touchstart", (event) => {
+    //         startTouchX = event.changedTouches[0].pageX;
+    //         startTouchY = event.changedTouches[0].pageY;
+    //     });
+    //
+    //     document.addEventListener("touchend", (event) => {
+    //         endTouchX = event.changedTouches[0].pageX;
+    //         endTouchY = event.changedTouches[0].pageY;
+    //         if (
+    //             startTouchX < 100 &&
+    //             Math.abs(endTouchY - startTouchY) < 40 &&
+    //             endTouchX > startTouchX
+    //         )
+    //             setOpen(true);
+    //         if (
+    //             startTouchX < 240 &&
+    //             Math.abs(endTouchY - startTouchY) < 40 &&
+    //             endTouchX < startTouchX
+    //         )
+    //             setOpen(false);
+    //     });
+    //  }, []);
 
-        document.addEventListener("touchstart", (event) => {
-            startTouchX = event.changedTouches[0].pageX;
-            startTouchY = event.changedTouches[0].pageY;
-        });
-
-        document.addEventListener("touchend", (event) => {
-            endTouchX = event.changedTouches[0].pageX;
-            endTouchY = event.changedTouches[0].pageY;
-            if (
-                startTouchX < 100 &&
-                Math.abs(endTouchY - startTouchY) < 40 &&
-                endTouchX > startTouchX
-            )
-                setOpen(true);
-            if (
-                startTouchX < 240 &&
-                Math.abs(endTouchY - startTouchY) < 40 &&
-                endTouchX < startTouchX
-            )
-                setOpen(false);
-        });
-    }, []);
     return (
         <header className="header">
             <div className="header__container">
@@ -50,7 +51,7 @@ const Header = () => {
                     </a>
                 </div>
                     <div className="">
-                        <nav className={`header__nav ${isOpen ? "active" : ""}`} ref={menuRef}>
+                        <nav className={`header__nav ${isOpen ? "" : "active"}`} ref={menuRef}>
                             <ul className="header__nav-list">
                                 <li className="header__nav-item">
                                     <Link to={`/sterh/info`} className="header__nav-link">

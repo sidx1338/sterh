@@ -23,8 +23,8 @@
 
 .objects {
   padding-top: 160px;
-  background: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0px 50px 0 var(--beruz);
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 50px 0 var(--beruz);
   backdrop-filter: blur( 0px );
   -webkit-backdrop-filter: blur( 0px );
   @media (max-width: 461px) {
@@ -38,7 +38,7 @@
     gap: 5px;
     margin: 0 auto;
     max-width: 1200px;
-    padding: 0 15px;
+    //padding: 0 15px;
     padding-bottom: 30px;
    // margin-bottom: 30px;
   }
