@@ -2,12 +2,13 @@
   //background-color: #222; /* Цвет фона футера */
   color: #fff; /* Цвет текста */
   padding: 50px 0; /* Внутренний отступ сверху и снизу */
-  background: rgb(34, 34, 34, 0.8);
+  background: rgb(34, 34, 34, 0.7);
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
  // margin-top: 30px
 }
 
 .footer__container {
-  max-width: 1200px;
   width: 100%;
   display: flex;
   gap: 200px;
@@ -48,7 +49,7 @@
 }
 
 .footer__menu-links {
-  width: 100%;
+  //width: 100%;
 }
 
 .footer__menu-item {
@@ -79,6 +80,11 @@
   }
 }
 
+.footer__logo-links {
+  display: flex;
+  align-items: center;
+}
+
 .footer__low {
   color: #b6b5b5;
   position: absolute;
@@ -88,6 +94,8 @@
     font-size: 10px;;
   }
 }
+
+
 
 
 

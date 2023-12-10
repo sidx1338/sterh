@@ -1,6 +1,6 @@
 // import React from "react";
 // import Header from "../../components/Header/Header.jsx";
-// // import SwipeableTextMobileStepper from "../../components/Slider/ImageSlider.jsx";
+// // import SwipeableTextMobileStepper from "../../components/Slider/Slider.jsx";
 // import Footer from "../../components/Footer/Footer.jsx";
 //
 // const Advantages = () => {

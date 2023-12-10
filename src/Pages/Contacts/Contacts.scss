@@ -1,8 +1,8 @@
 .background {
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 8px 32px 0 var(--beruz);
-  backdrop-filter: blur( 0px );
-  -webkit-backdrop-filter: blur( 0px );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
   //border-radius: 10px;
 }
 
@@ -37,8 +37,10 @@
 }
 
 .contacts__title {
+  opacity: 0;
   color: #0DBCDA;
-  font-size: 47px;
+  text-transform: uppercase;
+  font-size: 45px;
   font-weight: 700;
   line-height: 130%; /* 65px */
   @media (max-width: 1060px) {
@@ -52,15 +54,26 @@
   }
 }
 
+.contacts__title.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
 .contacts__connection {
+  opacity: 0;
   color: #ffffff;
-  font-size: 47px;
+  text-transform: uppercase;
+  font-size: 45px;
   font-weight: 700;
   line-height: 130%; /* 65px */
   margin-bottom: 30px;
   @media (max-width: 1060px) {
     font-size: 42px;
   }
+  @media (max-width: 1060px) {
+    text-align: center;
+  }
   @media (max-width: 457px) {
     font-size: 35px;
   }
@@ -69,10 +82,17 @@
   }
 }
 
+.contacts__connection.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
 .contacts__backconnection {
   max-width: 500px;
 
   @media (max-width: 1060px) {
+    padding-top: 30px;
     margin: auto;
   }
 
@@ -84,6 +104,7 @@
 }
 
 .contacts__adres {
+  opacity: 0;
   color: #FFF;
   font-size: 18px;
   font-style: normal;
@@ -95,6 +116,12 @@
   @media (max-width: 372px) {
     font-size: 12px;
   }
+}
+
+.contacts__adres.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .contacts__adres:not(:last-child) {
@@ -102,6 +129,7 @@
 }
 
 .contacts__grafik {
+  opacity: 0;
   color: #FFF;
   font-size: 18px;
   font-style: normal;
@@ -113,7 +141,12 @@
   @media (max-width: 372px) {
     font-size: 12px;
   }
+}
 
+.contacts__grafik.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .contacts__grafik span{
@@ -149,9 +182,16 @@
 }
 
 .contacts__obertka {
+  opacity: 0;
   display: flex;
   gap: 15px 30px;
   justify-content: space-between;
+}
+
+.contacts__obertka.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .contacts__number {
@@ -172,6 +212,7 @@
 .contacts__email {
   color: #FFFFFF;
   font-size: 18px;
+  padding-bottom: 1px;
   @media (max-width: 600px) {
     font-size: 14px;
   }
@@ -201,8 +242,6 @@
   //margin-bottom: 30px;
   padding-bottom: 30px;
 }
-
-
 
 
 

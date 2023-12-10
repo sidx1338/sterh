@@ -1,38 +1,66 @@
-* {
-  box-sizing: border-box;
+//* {
+//  box-sizing: border-box;
+//}
+
+
+.main__video {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.first {
-  max-height: 100vh;
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.effects {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.video-bg__content {
+  z-index: 2;
+  color: #ffffff;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- // background-color: rgba(0,0,0,0.5);
-  overflow: hidden
 }
 
-.main__video {
-  margin-bottom: 120px;
+.main__logo {
+  opacity: 0;
+  width: 300px;
+  //width: 100%;
 }
 
-.video__media {
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-height: 100vh;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.main__logo.active {
+  opacity: 1;
+  -webkit-animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 }
-
 
 .intro {
- // max-height: 100vh;
-  //overflow: hidden;
- // padding-bottom: 50px;
- // margin-bottom: 50px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  box-shadow: 0 8px 32px 0 var(--beruz);
 }
 
 .content {
@@ -43,6 +71,16 @@
    align-items: center;
    justify-content: center;
 }
+
+//.obj_link {
+//  border-radius: 15px;
+//  background: url("../../assets/Hexagon5.0.svg");
+//  position: relative;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//}
 
 .content__title {
   padding-top: 250px;
@@ -173,8 +211,66 @@
   //}
 }
 
+.nashi_project {
+  opacity: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.nashi_project.active {
+  opacity: 1;
+  -webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.backcon__container {
+  //border-radius: 20px;
+  //background: rgba(0, 0, 0, 0.1);
+ // backdrop-filter: blur( 10px );
+  //-webkit-backdrop-filter: blur( 10px );
+  //position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  margin-bottom: 60px;
+  padding-bottom: 15px;
+}
+
+.ocomp_link {
+  opacity: 0;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.ocomp_link.active {
+  opacity: 1;
+  -webkit-animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: tilt-in-top-1 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
 .project__title {
+  opacity: 0;
   color: var(--white);
+  padding-top: 50px;
+  text-align: center;
+  text-transform: uppercase;
   font-size: 38px;
   font-weight: 700;
   line-height: 130%; /* 65px */
@@ -193,12 +289,19 @@
   }
 }
 
+.project__title.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
+  animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
+}
+
 .project__title span {
   color: var(--beruz);
 }
 
 .project__subtitle {
-  text-indent: 50px;
+  opacity: 0;
+  text-align: center;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
@@ -212,26 +315,30 @@
   }
   @media (max-width: 906px) {
     font-size: 14px;
-    text-indent: 25px;
+    //text-indent: 25px;
   }
-  @media (max-width: 503px) {
-    font-size: 13px;
-    text-indent: 10px;
-  }
+}
+
+.project__subtitle.active {
+  opacity: 1;
+  -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
+  animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.6s both;
 }
 
 .obj_btn {
+  opacity: 0;
+  margin-top: 20px;
   color: var(--white);
   width: 250px;
   height: 70px;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur( 2px );
-  -webkit-backdrop-filter: blur( 2px );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
   font-size: 14px;
   text-transform: uppercase;
   border: 1px solid var(--white);
   padding: 15px;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
   border-radius: 8px;
   transition:
           background-color 0.3s ease 0s,
@@ -263,19 +370,25 @@
   }
 }
 
+.obj_btn.active {
+  opacity: 1;
+  -webkit-animation: blink-2 2s both;
+  animation: blink-2 2s both;
+}
+
 .ocomp_btn {
+  opacity: 0;
   color: var(--white);
-  opacity: 0.9;
   width: 250px;
   height: 70px;
   background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur( 2px );
-  -webkit-backdrop-filter: blur( 2px );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
   font-size: 14px;
   text-transform: uppercase;
   border: 1px solid var(--white);
   padding: 15px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   border-radius: 8px;
   transition:
           background-color 0.3s ease 0s,
@@ -306,3 +419,205 @@
     font-size: 10px;
   }
 }
+
+.ocomp_btn.active {
+  opacity: 1;
+  -webkit-animation: blink-2 2s both;
+  animation: blink-2 2s both;
+}
+
+@-webkit-keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+@keyframes tilt-in-top-1 {
+  0% {
+    -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+    transform: rotateY(0deg) translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-9 20:36:34
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    //letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+  // letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-9 20:37:42
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand-fwd-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-9 21:6:11
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation blink-2
+ * ----------------------------------------
+ */
+@-webkit-keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-9 23:25:53
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+

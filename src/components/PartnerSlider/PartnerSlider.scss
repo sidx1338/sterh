@@ -1,0 +1,47 @@
+.mySwiper {
+  max-width: 400px;
+  height: auto;
+}
+
+
+.swiper-slide {
+  background: rgba(115, 115, 115, 0.38);
+  border-radius: 10px;
+  backdrop-filter: blur( 2px );
+  -webkit-backdrop-filter: blur( 2px );
+}
+
+.swiper-slide-image-genesis {
+  padding-top: 10px;
+  margin-left: 75px;
+  //padding-left: 50px;
+  max-width: 200px;
+}
+
+.swiper-slide-image-ozerniy {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 120px;
+  max-width: 110px;
+}
+
+.swiper-slide-image-foshan {
+  padding-top: 15px;
+  margin-left: 50px;
+  max-width: 250px;
+}
+
+.swiper-slide-image-lada {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 125px;
+  max-width: 100px;
+}
+
+.swiper-slide-image-olegor {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 60px;
+  max-width: 230px;
+}
+

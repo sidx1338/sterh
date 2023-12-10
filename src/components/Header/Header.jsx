@@ -1,46 +1,18 @@
 import React, {useEffect, useRef, useState} from "react";
 import './Header.scss';
-import Logo from "../../assets/logong.svg";
+import Logo from "../../assets/logo.svg";
 import Phone from "../../assets/telephone.svg";
+import YouTube from "../../assets/youtube.svg";
+import Telegram from "../../assets/telegram.svg";
 import {useClickOutside} from "../../hooks/useClickOutside.js";
 import BurgerMenu from "../BurgerMenu/BurgerMenu.jsx";
 import {Link} from "react-router-dom";
+import ScrollToTop from "../../../ScrollToTop";
 
 const Header = () => {
+
     const [isOpen, setOpen] = useState();
     const menuRef = useRef(null);
-    // useClickOutside(menuRef, () => {
-    //     if (isOpen) setTimeout(() => setOpen(false), 50);
-    // });
-
-    // useEffect(() => {
-    //     let startTouchX = 0;
-    //     let endTouchX = 0;
-    //     let startTouchY = 0;
-    //     let endTouchY = 0;
-    //
-    //     document.addEventListener("touchstart", (event) => {
-    //         startTouchX = event.changedTouches[0].pageX;
-    //         startTouchY = event.changedTouches[0].pageY;
-    //     });
-    //
-    //     document.addEventListener("touchend", (event) => {
-    //         endTouchX = event.changedTouches[0].pageX;
-    //         endTouchY = event.changedTouches[0].pageY;
-    //         if (
-    //             startTouchX < 100 &&
-    //             Math.abs(endTouchY - startTouchY) < 40 &&
-    //             endTouchX > startTouchX
-    //         )
-    //             setOpen(true);
-    //         if (
-    //             startTouchX < 240 &&
-    //             Math.abs(endTouchY - startTouchY) < 40 &&
-    //             endTouchX < startTouchX
-    //         )
-    //             setOpen(false);
-    //     });
-    //  }, []);
 
     return (
         <header className="header">
@@ -50,8 +22,9 @@ const Header = () => {
                         <img src={Logo} alt="logo" width={200}/>
                     </a>
                 </div>
-                    <div className="">
-                        <nav className={`header__nav ${isOpen ? "" : "active"}`} ref={menuRef}>
+                    <div>
+                        <nav className={`header__nav ${isOpen ? "active" : ""}`} ref={menuRef}>
+                            <ScrollToTop/>
                             <ul className="header__nav-list">
                                 <li className="header__nav-item">
                                     <Link to={`/sterh/info`} className="header__nav-link">
@@ -68,6 +41,14 @@ const Header = () => {
                                         Контакты
                                     </Link>
                                 </li>
+                                <div className="links__logo">
+                                    <a href="#" className="nav__youtube-logo-link">
+                                        <img src={YouTube} alt="logo" width={48}/>
+                                    </a>
+                                    <a href="https://t.me/skSterhCrimea" className="nav__telegram-logo-link">
+                                        <img src={Telegram} alt="logo" width={40}/>
+                                    </a>
+                                </div>
                             </ul>
                         </nav>
                     </div>

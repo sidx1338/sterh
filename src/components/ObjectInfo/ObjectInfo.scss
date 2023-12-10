@@ -1,5 +1,8 @@
 .object_info {
   padding-top: 180px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur( 10px );
+  -webkit-backdrop-filter: blur( 10px );
   @media (max-width: 702px) {
     padding-top: 120px;
   }
@@ -26,7 +29,9 @@
 
 .object__title {
   color: var(--white);
-  font-size: 47px;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
   font-weight: 700;
   line-height: 130%; /* 65px */
   @media (max-width: 1060px) {

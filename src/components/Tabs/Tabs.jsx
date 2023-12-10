@@ -4,6 +4,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+//import { useInView } from "react-intersection-observer";
 import './Tabs.scss';
 
 function CustomTabPanel(props) {
@@ -40,6 +41,12 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs() {
+
+    // const {ref:ref1, inView:inView1} = useInView({
+    //     threshold: 0.5,
+    //     triggerOnce: true,
+    // });
+
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -50,7 +57,6 @@ export default function BasicTabs() {
             <Box sx={{ borderBottom: 1}} className="box">
                 <Tabs
                       className="tabs"
-                      classes={{ indicator: 'tabs__indicator' }}
                       value={value}
                       onChange={handleChange}
                       aria-label="basic tabs example"

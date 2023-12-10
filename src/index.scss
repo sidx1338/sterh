@@ -95,10 +95,9 @@ table {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--dark);
- // background-image: url('assets/Hexagon5.0.svg');
+  background: url("./assets/Hexagon15.svg") fixed;
   background-repeat: no-repeat;
-  //background-size: cover;
+  background-size: cover;
   overflow-x: hidden;
 }
 
@@ -107,5 +106,18 @@ body {
   padding: 0 15px;
   overflow: hidden;
   margin: 0 auto;
+}
+
+
+@media (min-width: 2560px) {
+  html {
+    zoom: 1.5;
+  }
+}
+
+@media (min-width: 3860px) {
+  html {
+    zoom: 2.5;
+  }
 }
 

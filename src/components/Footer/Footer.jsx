@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.scss";
 import Logo from '../../assets/logo_footer.svg';
 import {Link} from "react-router-dom";
+import YouTube from "../../assets/youtube.svg";
+import Telegram from "../../assets/telegram.svg";
 
 function Footer() {
     let currentYear = new Date().getFullYear();
@@ -28,6 +30,7 @@ function Footer() {
                         <a href="#" className="footer__email">sk.sterh@mail.ru</a>
                     </div>
                 </div>
+
                 <div className="footer__services">
                         <p className="footer__text">Строительство жилых и нежилых зданий</p>
                         <p className="footer__text">Строительство коттеджей</p>
@@ -40,7 +43,7 @@ function Footer() {
                         <ul className="footer__menu-list">
                             <li className="footer__menu-item">
                                 <Link to={`/sterh/info`} className="footer__nav-link">
-                                    О компании
+                                    О нас
                                 </Link>
                             </li>
                             <li className="footer__menu-item">
@@ -54,6 +57,15 @@ function Footer() {
                                 </Link>
                             </li>
                         </ul>
+                </div>
+
+                <div className="footer__logo-links">
+                    <a href="#" className="">
+                        <img src={YouTube} alt="logo" width={38}/>
+                    </a>
+                    <a href="https://t.me/skSterhCrimea" className="">
+                        <img src={Telegram} alt="logo" width={30}/>
+                    </a>
                 </div>
             </div>
             <div className="footer__low">{currentYear} © Все права защищены</div>

@@ -16,7 +16,6 @@ import {Services} from "./Pages/Services/Services.jsx";
 import ObjectInfo from "./components/ObjectInfo/ObjectInfo.jsx";
 import App from "./App.jsx";
 
-
 const router = createHashRouter([
     {
         path: "/",
@@ -51,6 +50,7 @@ const router = createHashRouter([
         element: <ObjectInfo/>
     }
 ]);
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
       <RouterProvider router={router}/>
